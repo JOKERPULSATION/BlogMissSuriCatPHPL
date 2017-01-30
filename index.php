@@ -7,6 +7,7 @@ include_once('models/entities/Client.php');
 include_once('models/entities/User.php');
 include_once('models/repositories/ClientRepository.php');
 include_once('models/repositories/UserRepository.php');
+include_once('models/repositories/CommandeRepository.php')
 
 //On récupère un objet PDO une fois pour toutes pour dialoguer avec la bdd
 $pdo = PDOFactory::getMysqlConnection();
@@ -120,6 +121,14 @@ switch ($action) {
 		$listeClients = $clientRepo->getAll($pdo);
 		$vueAAfficher = "views/listClient.php";
 		break;
+
+	case "listCommande":
+		//On prépare la vue a afficher avec les données dont elle a besoin
+		$commandeRepo = new CommandeRepository.php();
+		$ListeCommande = $CommandeRepo->getAll($pdo);
+		$vueAAfficher = "views/listCommande.php";
+		break;
+
 
 	//Jeu d'instructions appelé lorsque aucune action n'est renseignée dans l'url
 	default:
