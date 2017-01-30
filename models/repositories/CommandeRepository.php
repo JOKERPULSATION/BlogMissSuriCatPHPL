@@ -2,7 +2,7 @@
 
 class CommandeRepository{
 
-	}
+	
 	public function getAllCmd ($pdo){
 
 			//Effectuer la requête en bdd pour récupérer l'ensemble des commandes enregistrés en bdd
@@ -17,26 +17,24 @@ class CommandeRepository{
 			// 3 - pour chaque objet commande instanciés et hydratés, les ajouter dans un tableau
 			// 4 - retourner ensuite ce tableau avec l'instruction return
 
-			$listeCommandes = array();
+			$listeCommande = array();
 
 			while($obj = $resultats->fetch()){	
 
-				$commande = new commande();
+				$commande = new Commande();
 				$commande->setId($obj->id);
-				$commande->setCivilite($obj->civilite);
-				$commande->setNom($obj->nom);
-				$commande->setPrenom($obj->prenom);
-				$commande->setRef($obj->ref);
-				$commande->setDateCmd($obj->date_cmd);
-				$commande->setDateExped($obj->date_expedition);
-				$commande->setVille($obj->ville);
-				$commande->setBic($obj->bic);
-				$commande->setIban($obj->iban);
-
-				$listeCommandes[] = $commande;
+				$commande->setReference($obj->reference);
+				$commande->setDateCommande($obj->dateCommande);
+				$commande->setDateExpedition($obj->dateExpedition);
+			
+				$listeCommande[] = $commande;
 
 			}
 
-			return $listeCommandes;
+			return $listeCommande;
+
+}
 }
  ?>
+
+ <p>a</p>

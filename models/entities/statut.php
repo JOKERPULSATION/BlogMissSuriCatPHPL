@@ -3,12 +3,12 @@ class Statut{
 	private $statutId;
 	private $libelle;
 
-	public function getStatutId() {
+	public function getIdStatut() {
 		return $this->statutId;
 	}
 
-	public function setStatutId($statutId) {
-		$this->statutId = $statutId;
+	public function setIdStatut($idStatut) {
+		$this->IdStatut = $idStatut;
 	}
 
 	public function getLibelle() {
