@@ -7,7 +7,7 @@ include_once('models/entities/Client.php');
 include_once('models/entities/User.php');
 include_once('models/repositories/ClientRepository.php');
 include_once('models/repositories/UserRepository.php');
-include_once('models/repositories/CommandeRepository.php')
+include_once('models/repositories/CommandeRepository.php');
 
 //On récupère un objet PDO une fois pour toutes pour dialoguer avec la bdd
 $pdo = PDOFactory::getMysqlConnection();
