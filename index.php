@@ -124,8 +124,8 @@ switch ($action) {
 
 	case "listCommande":
 		//On prépare la vue a afficher avec les données dont elle a besoin
-		$commandeRepo = new CommandeRepository.php();
-		$ListeCommande = $CommandeRepo->getAll($pdo);
+		$commandeRepo = new CommandeRepository();
+		$listeCommande = $commandeRepo->getAll($pdo);
 		$vueAAfficher = "views/listCommande.php";
 		break;
 
