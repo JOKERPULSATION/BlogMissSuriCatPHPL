@@ -1,14 +1,17 @@
-<?php 
-class Statut{
-	private $statutId;
+<?php
+
+class Statut
+{
+
+	private $id;
 	private $libelle;
 
-	public function getIdStatut() {
-		return $this->statutId;
+	public function getId() {
+		return $this->id;
 	}
 
-	public function setIdStatut($idStatut) {
-		$this->IdStatut = $idStatut;
+	public function setid($id) {
+		$this->id = $id;
 	}
 
 	public function getLibelle() {
@@ -19,4 +22,3 @@ class Statut{
 		$this->libelle = $libelle;
 	}
 }
-?>
